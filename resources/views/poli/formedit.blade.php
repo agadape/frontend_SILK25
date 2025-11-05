@@ -43,7 +43,10 @@ async function loadForm() {
     let pasien = null, poli = null;
     for (const p of data) {
       const found = p.pasien_aktif.find(ps => ps.id_rm == idRM);
-      if (found) { pasien = found; poli = p; break; }
+      if (found) { pasien = found; poli = p;
+console.log(pasien);
+        break; }
+
     }
 
     if (!pasien) return box.innerHTML = `<p class="error">Pasien tidak ditemukan</p>`;
@@ -56,7 +59,7 @@ async function loadForm() {
 
       <form id="periksaForm">
         <input type="hidden" id="id_rm" value="${pasien.id_rm}">
-        <input type="hidden" id="id_antrian" value="${pasien.nomor_antrian}">
+        <input type="hidden" id="id_antrian" value="${pasien.id_antrian}">
         <input type="hidden" id="id_poli" value="${poli.id_poli}">
 
         <div class="form-group">
