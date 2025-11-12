@@ -127,7 +127,7 @@
   </div>
 
   <script>
-    const API_URL = 'http://localhost/rumah_sakit/public/api/poli_dengan_pasien';
+    const API_URL = 'http://localhost/silk2025_api/public/api/poli_dengan_pasien';
 
     async function loadPoli() {
       const container = document.getElementById('poliContainer');
