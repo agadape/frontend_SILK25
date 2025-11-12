@@ -119,11 +119,11 @@
                 const res = await fetch(API_URL);
                 const data = await res.json();
 
-                let pasien = null, poli = null;
-                for (const p of data) {
-                    const found = p.pasien_aktif.find(ps => ps.id_rm == idRM);
-                    if (found) { pasien = found; poli = p; break; }
-                }
+    let pasien = null, poli = null;
+    for (const p of data) {
+      const found = p.pasien_aktif.find(ps => ps.id_rm == idRM);
+      if (found) { pasien = found; poli = p; break; }
+    }
 
                 if (!pasien) return box.innerHTML = `<p class="error">Pasien tidak ditemukan</p>`;
 
